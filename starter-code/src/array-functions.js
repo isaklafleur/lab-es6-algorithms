@@ -1,4 +1,4 @@
-const ArrayFunctions = function (){}
+const ArrayFunctions = function() {};
 
 // 1) Define a function that takes an array with numbers and prints all the elements of the array, separated by " --- "
 // ArrayFunctions.printSpecial([12, 33, 144, 122])
@@ -18,17 +18,20 @@ ArrayFunctions.doubleArray = array => array.map(number => number * 2);
 // explanation: (1 x 10^0) + (2 x 10^1) + (3 x 10^2) + (4 x 10^3) + (5 x 10^4)
 // explanation: (1)        + (20)       + (300)      + (4000)     + (50000)
 
-ArrayFunctions.superPower = array => array.reduce((sum, number, index) => sum + (number * (Math.pow(10, index))));
+ArrayFunctions.superPower = array =>
+  array.reduce((sum, number, index) => sum + number * Math.pow(10, index));
 
 class Crazy {
   static printSpecial(array) {
-     return array.join(" --- ");
+    return array.join(" --- ");
   }
   static doubleArray(array) {
     return array.map(number => number * 2);
   }
   static superPower(array) {
-    return array.reduce((sum, number, index) => sum + (number * (Math.pow(10, index))));
+    return array.reduce(
+      (sum, number, index) => sum + number * Math.pow(10, index),
+    );
   }
 }
 
